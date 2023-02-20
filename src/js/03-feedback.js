@@ -3,8 +3,8 @@ const formRef = document.querySelector('.feedback-form');
 
 const key = 'feedback-form-state';
 const formData = {
-  // email: '',
-  // message: '',
+  email: '',
+  message: '',
 };
 formRef.addEventListener('input', throttle(onFormInput, 500));
 
