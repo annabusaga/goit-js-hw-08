@@ -11,8 +11,8 @@ formRef.addEventListener('input', throttle(onFormInput, 500));
 formRef.addEventListener('submit', onFormSubmit);
 const data = JSON.parse(localStorage.getItem(key));
 if (data) {
-  formRef.elements.email.value = data.email;
-  formRef.elements.message.value = data.message;
+  formRef.elements.email.value = data.email || '';
+  formRef.elements.message.value = data.message || '';
   formData.email = data.email || '';
   formData.message = data.message || '';
 }
